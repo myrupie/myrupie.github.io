@@ -92,6 +92,7 @@ $(window).load(function() {
             $(".navbar-toggle").click()
         }
     });
+
 	
 })
 
@@ -123,21 +124,8 @@ $(document).ready(function(){
             enabled: true
         }
     });
-
-
-
-
-//------------------------------------------------------------------------
-//						TESTIMONIALS LINE SLIDER SETTINGS
-//------------------------------------------------------------------------
-    var owl = $(".quote-block .owl-carousel");
-    owl.owlCarousel({
-        singleItem:true,
-		autoPlay:5000,
-		stopOnHover:true
-    });		
 		
-	
+		
 		
 	
 //------------------------------------------------------------------------
