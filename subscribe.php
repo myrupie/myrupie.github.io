@@ -1,12 +1,12 @@
 <?php
-$apiKey = ''; // your mailchimp API KEY here
-$listId = ''; // your mailchimp LIST ID here
+$apiKey = '09a034c9ac861b7c0aa3cc2b1bac3b87-us14'; // your mailchimp API KEY here
+$listId = 'e028c77ac3'; // your mailchimp LIST ID here
 $double_optin=false;
 $send_welcome=false;
 $email_type = 'html';
 $email = $_POST['newsletter_email'];
 //replace us2 with your actual datacenter
-$submit_url = "http://us3.api.mailchimp.com/1.3/?method=listSubscribe";
+$submit_url = "http://us14.api.mailchimp.com/1.3/?method=listSubscribe";
 $data = array(
     'email_address'=>$email,
     'apikey'=>$apiKey,
@@ -16,13 +16,13 @@ $data = array(
     'email_type' => $email_type
 );
 $payload = json_encode($data);
- 
+
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_URL, $submit_url);
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($ch, CURLOPT_POST, true);
 curl_setopt($ch, CURLOPT_POSTFIELDS, urlencode($payload));
- 
+
 $result = curl_exec($ch);
 curl_close ($ch);
 $data = json_decode($result);

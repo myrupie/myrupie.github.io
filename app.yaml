@@ -5,7 +5,7 @@ handlers:
 
 - url: /
   static_files: index.html
-  upload: static/index.html
+  upload: index.html
 
 - url: /css
   static_dir: css
